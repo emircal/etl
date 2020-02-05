@@ -1,0 +1,19 @@
+{
+  "name": "etl",
+  "version": "1.0.0",
+  "description": "Royal Caribbean Cruise Search ETL process POC",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emir Calabuch",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "mongodb": "^3.5.2",
+    "parse-duration": "^0.1.2",
+    "query": "github:protobi/query"
+  }
+}

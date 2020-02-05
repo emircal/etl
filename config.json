@@ -1,0 +1,29 @@
+{
+  "mdbServerUri": "mongodb+srv://user1:1234qwer@royal-poc-7pd3e.mongodb.net/test?retryWrites=true&w=majority",
+  "tokenBucketDatabase": "poc_etl",
+  "tokenBucketCollection": "token_buckets",
+  "bucketName": "ESL",
+  "ratePerSecond": 5,
+  "initialTokens": 0,
+  "bucketLimit": 5,
+  "sailingsDatabase": "poc_app",
+  "sailingsCollection": "sailings",
+  "sailingsUpdateUrl": "https://poc-cunwv.mongodbstitch.com/sailings.json",
+  "priceUpdateUrl": "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/poc-cunwv/service/endpoint/incoming_webhook/echo",
+  "rulebook": [
+    {
+      "name": "Rule 1",
+      "match": { "departureCode": { "$in": [ "FLL", "MIA" ]} },
+      "updateEvery": "10 minutes"
+    },
+    {
+      "name": "Rule 2",
+      "match": { "val": { "$gt": 50 } },
+      "updateEvery": "15 minutes"
+    },
+    {
+      "default": true,
+      "updateEvery": "60 minutes"
+    }
+  ]
+}
