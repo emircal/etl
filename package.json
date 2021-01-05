@@ -11,7 +11,7 @@
   "author": "Emir Calabuch",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "mongodb": "^3.5.2",
     "parse-duration": "^0.1.2",
     "query": "github:protobi/query"
